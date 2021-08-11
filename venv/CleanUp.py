@@ -1,5 +1,5 @@
 import os
-
+import glob
 
 
 class CleanUp:
@@ -10,7 +10,9 @@ class CleanUp:
 
     def findfiles(self):
         os.chdir(self.directory)
-        for file in
+        for file in glob.glob('*.txt'):
+            self.files.append(file)
+
     def deleteallfiles(self):
         for file in self.files:
             os.remove(self.directory + "/" + file)
